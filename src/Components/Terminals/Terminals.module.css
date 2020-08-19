@@ -1,0 +1,43 @@
+.terminalsForm {
+    text-align: center;
+}
+
+.terminalName {
+    width: 250px;
+    height: 30px;
+}
+
+.terminalDesc {
+    width: 250px;
+    height: 70px;
+}
+
+.terminalsList h3 {
+    text-align: center;
+}
+
+.terminalsListHeaders {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-column-gap: 30px;
+    margin-bottom: 20px;
+}
+
+.terminalItem {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-column-gap: 30px;
+}
+
+.itemName {
+    margin-bottom: 20px;
+}
+
+.itemDesc {
+    margin-bottom: 20px;
+}
+
+.terminalItemWrapper button {
+    width: 70px;
+    height: 30px;
+}
