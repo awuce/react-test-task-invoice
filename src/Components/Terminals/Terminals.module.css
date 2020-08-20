@@ -1,5 +1,13 @@
 .terminalsForm {
     text-align: center;
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+}
+
+.terminalNameWrapper, .terminalDescWrapper {
+    display: grid;
+    justify-items: left;
 }
 
 .terminalName {
@@ -12,7 +20,8 @@
     height: 70px;
 }
 
-.terminalsList h3 {
+.terminalsListWrapper h3,
+.terminalsFormWrapper h3{
     text-align: center;
 }
 
