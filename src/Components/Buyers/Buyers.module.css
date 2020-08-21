@@ -1,0 +1,9 @@
+.buyersTable {
+    margin: 10px;
+}
+
+.tableHead {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+}

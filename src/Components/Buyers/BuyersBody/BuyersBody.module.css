@@ -1,0 +1,9 @@
+.customerString {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 4px 10px;
+}
+
+.customerString:nth-child(odd) {
+    background-color: #bfbfbf;
+}
