@@ -1,0 +1,10 @@
+.tableHead {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+}
+
+.tableHead > div {
+    display: grid;
+    grid-auto-flow: column dense;
+}
