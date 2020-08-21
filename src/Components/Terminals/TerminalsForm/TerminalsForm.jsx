@@ -5,6 +5,7 @@ import {Field, reduxForm} from "redux-form";
 const TerminalForm = (props) => {
     return (
         <form className={style.terminalsForm} onSubmit={props.handleSubmit}>
+            <h3>Добавить термнал</h3>
             <div className={style.terminalNameWrapper}>
                 <label htmlFor="terminalName">Название терминала</label>
                 <Field name="terminalName" component="input" type="text" className={style.terminalName}/>

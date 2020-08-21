@@ -12,10 +12,11 @@
   <component name="ChangeListManager">
     <list default="true" id="175542fe-09ff-4baf-ad82-07a6bddecff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Buyers/Buyers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Buyers/Buyers.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Terminals/Terminals.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Terminals/Terminals.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Terminals/Terminals.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Terminals/Terminals.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Terminals/TerminalsForm/TerminalsForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Terminals/TerminalsForm/TerminalsForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Terminals/redux-store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/redux-store.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Terminals/terminals-reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/terminals-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,24 +47,62 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components/Terminals/TerminalsListItems" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Reducers" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Reducers" />
+      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Buyers\BuyersBody" />
+      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Terminals\TerminalsListItems" />
+      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Terminals" />
+      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Buyers\alert" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Reducers" />
       <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\exchange" />
       <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Terminals" />
       <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Terminals\TerminalsForm" />
       <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Terminals\TerminalsListItems" />
-      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Buyers\alert" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Terminals\TerminalsListItems" />
-      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Terminals" />
-      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Buyers\alert" />
-      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Buyers" />
-      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components" />
-    </key>
+  </component>
+  <component name="RunManager" selected="Jest.length of terminalsData should be decremented">
+    <configuration name="length of terminalsData should be decremented" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Reducers/terminals-reducer.test.js" />
+      <test-names>
+        <test-name value="length of terminalsData should be decremented" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="length of terminalsData should be incremented" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Reducers/terminals-reducer.test.js" />
+      <test-names>
+        <test-name value="length of terminalsData should be incremented" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.length of terminalsData should be decremented" />
+        <item itemvalue="Jest.length of terminalsData should be incremented" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -75,7 +114,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597798563392</updated>
-      <workItem from="1597798585326" duration="65031000" />
+      <workItem from="1597798585326" duration="68323000" />
+      <workItem from="1597965199427" duration="3593000" />
     </task>
     <servers />
   </component>
@@ -92,6 +132,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="405" y="131" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597803882183">

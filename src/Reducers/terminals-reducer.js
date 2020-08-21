@@ -6,7 +6,7 @@ let initialState = {
         {id: 0, terminalId: 0, name: "Terminal 1", desc: "None Desc"},
         {id: 1, terminalId: 1, name: "Terminal 2", desc: "None Desc"},
         {id: 2, terminalId: 2, name: "Terminal 3", desc: "None Desc Desc"},
-        {id: 3, terminalId: 3, name: "Terminal 4", desc: null},
+        {id: 3, terminalId: 3, name: "Terminal 4", desc: ""},
     ]
 }
 
