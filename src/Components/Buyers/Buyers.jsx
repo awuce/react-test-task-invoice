@@ -8,7 +8,7 @@ const Buyers = (props) => {
     return (
         <div className={style.buyersTable}>
             <BuyersHead {...props} />
-            <BuyersBody buyersData={buyersData}/>
+            <BuyersBody buyersData={buyersData} setInitialData={props.setInitialData}/>
         </div>
     );
 }

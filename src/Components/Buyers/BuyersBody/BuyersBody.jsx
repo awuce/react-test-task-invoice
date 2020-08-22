@@ -1,8 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import style from "./BuyersBody.module.css";
 
 const BuyersBody = (props) => {
-    const buyersMap = [...props.buyersData]
+    useEffect(() => {
+        props.setInitialData()
+    }, [])
+
+    const buyersMap = props.buyersData
         .map( b =>  <Buyer key={b.buyerId}
                            buyerId={b.buyerId}
                            buyerName={b.buyerName}
@@ -10,7 +14,6 @@ const BuyersBody = (props) => {
                            checks={b.checks}
                            numberPurchases={b.numberPurchases}
                            totalProceeds={b.totalProceeds} /> )
-
 
     return (
         <div className={style.tableBody}>
@@ -20,28 +23,14 @@ const BuyersBody = (props) => {
 }
 
 const Buyer = (props) => {
-    const [buyerId, setBuyerId] = useState(props.buyerId)
-    const [buyerName, setBuyerName] = useState(props.buyerName)
-    const [averageCheck, setAverageCheck] = useState(props.averageCheck)
-    const [checks, setChecks] = useState(props.checks)
-    const [numberPurchases, setNumberPurchases] = useState(props.numberPurchases)
-    const [totalProceeds, setTotalProceeds] = useState(props.totalProceeds)
-
-    useEffect(() => {
-        let total = checks.reduce((sum, check) => {
-            return sum += check
-        }, 0);
-        setAverageCheck(Math.round(total / numberPurchases) || 0);
-        setTotalProceeds(total);
-    }, [checks])
-
+    if (!props.buyerId) return (<></>)
     return (
         <div className={style.customerString}>
-            <div>{buyerId}</div>
-            <div>{buyerName}</div>
-            <div>{averageCheck}</div>
-            <div>{numberPurchases}</div>
-            <div>{totalProceeds}</div>
+            <div>{props.buyerId}</div>
+            <div>{props.buyerName}</div>
+            <div>{props.averageCheck}</div>
+            <div>{props.numberPurchases}</div>
+            <div>{props.totalProceeds}</div>
         </div>
     )
 }

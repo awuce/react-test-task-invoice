@@ -1,7 +1,7 @@
-import React from "react";
 import {connect} from "react-redux";
 import Buyers from "./Buyers";
 import {
+    setInitialDataAC,
     sortByAverageCheckAC,
     sortByIdAC,
     sortByNameAC,
@@ -17,6 +17,9 @@ let mapStateToProps = (state) => {
 }
 let mapDispatchToProps = (dispatch) => {
     return {
+        setInitialData: () => {
+            dispatch(setInitialDataAC());
+        },
         sortById: (toggle) => {
             dispatch(sortByIdAC(toggle));
         },

@@ -1,5 +1,5 @@
-
-const SORT_BY_ID = "SORT_BY_BUYER_ID"
+const SET_INITIAL_DATA = "SET_INITIAL_DATA"
+const SORT_BY_ID = "SORT_BY_ID"
 const SORT_BY_NAME = "SORT_BY_NAME"
 const SORT_BY_AVERAGE_CHECK = "SORT_BY_AVERAGE_CHECK"
 const SORT_BY_NUMBER_PURCHASES = "SORT_BY_NUMBER_PURCHASES"
@@ -25,9 +25,25 @@ let initialState = {
     ],
 }
 
-
 const buyersReducer = (state = initialState, action) => {
     switch (action.type) {
+        case SET_INITIAL_DATA:
+            return {
+                ...state,
+                buyersData: [
+                    ...state.buyersData,
+                    state.buyersData.map(e => {
+                        return e.totalProceeds = e.checks.reduce((s, e) => {
+                            return s + e
+                        }, 0)
+                    }),
+                    state.buyersData.map(e => {
+                        return e.averageCheck = Math.round(e.checks.reduce((s, e) => {
+                            return s + e
+                        }, 0) / e.numberPurchases) || 0
+                    }),
+                ],
+            }
         case SORT_BY_ID:
             return {
                 ...state,
@@ -73,6 +89,7 @@ const buyersReducer = (state = initialState, action) => {
     }
 }
 
+export const setInitialDataAC = () => ({ type: SET_INITIAL_DATA })
 export const sortByIdAC = (toggle) => ({ type: SORT_BY_ID, toggle })
 export const sortByNameAC = (toggle) => ({ type: SORT_BY_NAME, toggle })
 export const sortByAverageCheckAC = (toggle) => ({ type: SORT_BY_AVERAGE_CHECK, toggle })
