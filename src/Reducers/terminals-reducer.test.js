@@ -20,5 +20,3 @@ it('length of terminalsData should be decremented', () => {
     let state = terminalsReducer(initialState, action);
     expect(state.terminalsData.length).toBe(3);
 })
-
-export default terminalsReducer;

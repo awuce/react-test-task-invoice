@@ -17,9 +17,6 @@ let mapStateToProps = (state) => {
 }
 let mapDispatchToProps = (dispatch) => {
     return {
-        setInitialData: () => {
-            dispatch(setInitialDataAC());
-        },
         sortById: (toggle) => {
             dispatch(sortByIdAC(toggle));
         },

@@ -2,10 +2,6 @@ import React, {useEffect} from "react";
 import style from "./BuyersBody.module.css";
 
 const BuyersBody = (props) => {
-    useEffect(() => {
-        props.setInitialData()
-    }, [])
-
     const buyersMap = props.buyersData
         .map( b =>  <Buyer key={b.buyerId}
                            buyerId={b.buyerId}
@@ -13,7 +9,8 @@ const BuyersBody = (props) => {
                            averageCheck={b.averageCheck}
                            checks={b.checks}
                            numberPurchases={b.numberPurchases}
-                           totalProceeds={b.totalProceeds} /> )
+                           totalProceeds={b.totalProceeds}
+                           setInitialData={props.setInitialData}/> )
 
     return (
         <div className={style.tableBody}>
@@ -23,7 +20,6 @@ const BuyersBody = (props) => {
 }
 
 const Buyer = (props) => {
-    if (!props.buyerId) return (<></>)
     return (
         <div className={style.customerString}>
             <div>{props.buyerId}</div>

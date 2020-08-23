@@ -1,4 +1,3 @@
-const SET_INITIAL_DATA = "SET_INITIAL_DATA"
 const SORT_BY_ID = "SORT_BY_ID"
 const SORT_BY_NAME = "SORT_BY_NAME"
 const SORT_BY_AVERAGE_CHECK = "SORT_BY_AVERAGE_CHECK"
@@ -7,43 +6,26 @@ const SORT_BY_TOTAL_PROCEEDS = "SORT_BY_TOTAL_PROCEEDS"
 
 let initialState = {
     buyersData: [
-        {id: 0, buyerId: 1, buyerName: "_", averageCheck: 0, checks: [1000, 250], numberPurchases: 2, totalProceeds: 0},
-        {id: 1, buyerId: 2, buyerName: "_", averageCheck: 0, checks: [100, 300], numberPurchases: 2, totalProceeds: 0},
-        {id: 2, buyerId: 3, buyerName: "_", averageCheck: 0, checks: [200], numberPurchases: 1, totalProceeds: 0},
-        {id: 3, buyerId: 4, buyerName: "_", averageCheck: 0, checks: [100, 400], numberPurchases: 2, totalProceeds: 0},
+        {id: 0, buyerId: 1, buyerName: "_", averageCheck: Math.round(1250/3), checks: [1000, 250], numberPurchases: 2, totalProceeds: 1250},
+        {id: 1, buyerId: 2, buyerName: "_", averageCheck: Math.round(400/2), checks: [100, 300], numberPurchases: 2, totalProceeds: 400},
+        {id: 2, buyerId: 3, buyerName: "_", averageCheck: 200, checks: [200], numberPurchases: 1, totalProceeds: 0},
+        {id: 3, buyerId: 4, buyerName: "_", averageCheck: Math.round(500/2), checks: [100, 400], numberPurchases: 2, totalProceeds: 500},
         {id: 4, buyerId: 5, buyerName: "_", averageCheck: 0, checks: [], numberPurchases: 0, totalProceeds: 0},
-        {id: 5, buyerId: 6, buyerName: "_", averageCheck: 0, checks: [250], numberPurchases: 1, totalProceeds: 0},
-        {id: 6, buyerId: 7, buyerName: "_", averageCheck: 0, checks: [100], numberPurchases: 1, totalProceeds: 0},
-        {id: 7, buyerId: 8, buyerName: "_", averageCheck: 0, checks: [300], numberPurchases: 1, totalProceeds: 0},
-        {id: 8, buyerId: 9, buyerName: "_", averageCheck: 0, checks: [500], numberPurchases: 1, totalProceeds: 0},
-        {id: 9, buyerId: 10, buyerName: "_", averageCheck: 0, checks: [50], numberPurchases: 1, totalProceeds: 0},
-        {id: 10, buyerId: 11, buyerName: "_", averageCheck: 0, checks: [1000, 200], numberPurchases: 2, totalProceeds: 0},
+        {id: 5, buyerId: 6, buyerName: "_", averageCheck: 250, checks: [250], numberPurchases: 1, totalProceeds: 250},
+        {id: 6, buyerId: 7, buyerName: "_", averageCheck: 100, checks: [100], numberPurchases: 1, totalProceeds: 100},
+        {id: 7, buyerId: 8, buyerName: "_", averageCheck: 300, checks: [300], numberPurchases: 1, totalProceeds: 300},
+        {id: 8, buyerId: 9, buyerName: "_", averageCheck: 500, checks: [500], numberPurchases: 1, totalProceeds: 500},
+        {id: 9, buyerId: 10, buyerName: "_", averageCheck: 50, checks: [50], numberPurchases: 1, totalProceeds: 50},
+        {id: 10, buyerId: 11, buyerName: "_", averageCheck: Math.round(1200/2), checks: [1000, 200], numberPurchases: 2, totalProceeds: 1200},
         {id: 11, buyerId: 12, buyerName: "_", averageCheck: 0, checks: [], numberPurchases: 0, totalProceeds: 0},
-        {id: 12, buyerId: 13, buyerName: "_", averageCheck: 0, checks: [300], numberPurchases: 1, totalProceeds: 0},
-        {id: 13, buyerId: 14, buyerName: "_", averageCheck: 0, checks: [100, 50, 200], numberPurchases: 3, totalProceeds: 0},
-        {id: 14, buyerId: 15, buyerName: "_", averageCheck: 0, checks: [200], numberPurchases: 1, totalProceeds: 0},
+        {id: 12, buyerId: 13, buyerName: "_", averageCheck: 300, checks: [300], numberPurchases: 1, totalProceeds: 300},
+        {id: 13, buyerId: 14, buyerName: "_", averageCheck: Math.round(1600/3), checks: [1000, 400, 200], numberPurchases: 3, totalProceeds: 1600},
+        {id: 14, buyerId: 15, buyerName: "_", averageCheck: 200, checks: [200], numberPurchases: 1, totalProceeds: 200},
     ],
 }
 
 const buyersReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_INITIAL_DATA:
-            return {
-                ...state,
-                buyersData: [
-                    ...state.buyersData,
-                    state.buyersData.map(e => {
-                        return e.totalProceeds = e.checks.reduce((s, e) => {
-                            return s + e
-                        }, 0)
-                    }),
-                    state.buyersData.map(e => {
-                        return e.averageCheck = Math.round(e.checks.reduce((s, e) => {
-                            return s + e
-                        }, 0) / e.numberPurchases) || 0
-                    }),
-                ],
-            }
         case SORT_BY_ID:
             return {
                 ...state,
@@ -89,7 +71,6 @@ const buyersReducer = (state = initialState, action) => {
     }
 }
 
-export const setInitialDataAC = () => ({ type: SET_INITIAL_DATA })
 export const sortByIdAC = (toggle) => ({ type: SORT_BY_ID, toggle })
 export const sortByNameAC = (toggle) => ({ type: SORT_BY_NAME, toggle })
 export const sortByAverageCheckAC = (toggle) => ({ type: SORT_BY_AVERAGE_CHECK, toggle })
