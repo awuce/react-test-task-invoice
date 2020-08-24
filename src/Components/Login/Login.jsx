@@ -3,6 +3,12 @@ import {Field, reduxForm} from "redux-form";
 import style from "./Login.module.css"
 import {login} from "../../Reducers/login-reducer";
 import {connect} from "react-redux";
+import {maxLengthCreator, minLengthCreator, required} from "../../Utils/validators";
+import {Input} from "../../Utils/FormControl";
+
+const maxLength20 = maxLengthCreator(20);
+const minLength1 = minLengthCreator(1);
+const minLength8 = minLengthCreator(8);
 
 const LoginForm = (props) => {
     // const change = (v) => {
@@ -18,11 +24,15 @@ const LoginForm = (props) => {
         <form onSubmit={props.handleSubmit}>
             <div className={style.loginLine}>
                 <label htmlFor="login">Введите логин:</label>
-                <Field component={"input"} name="login" placeholder="login" />
+                <Field component={Input} name="login"
+                       validate={[required, minLength1, maxLength20]}
+                       placeholder="login" />
             </div>
             <div className={style.passwordLine}>
                 <label htmlFor="password">Введите пароль:</label>
-                <Field component={"input"} name="password" placeholder="password" type={"password"} />
+                <Field component={Input} name="password"
+                       validate={[required, minLength8, maxLength20]}
+                       placeholder="password" type={"password"} />
             </div>
             <div className={style.buttonLine}>
                 <button type="submit">Login</button>

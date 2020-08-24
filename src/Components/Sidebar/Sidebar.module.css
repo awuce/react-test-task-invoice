@@ -6,19 +6,14 @@
     align-content: space-between;
 }
 
-.item {
+.imageLink img {
     background-color: #008b8b;
-}
-
-.image {
-    width: 60px;
-    height: 60px;
-}
-.image img {
+    min-width: 150px;
+    min-height: 150px;
     max-width: 100%;
 }
 
-.link {
+.asideLink {
     text-decoration: none;
     color: #050505;
     font-size: 14pt;

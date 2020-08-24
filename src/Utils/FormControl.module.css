@@ -1,0 +1,9 @@
+.error {
+    color: #fff;
+    background-color: darkred;
+}
+
+.error span {
+    text-align: center;
+    margin: 5px;
+}

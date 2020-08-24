@@ -5,21 +5,20 @@ import {NavLink} from "react-router-dom";
 const Sidebar = (props) => {
     return (
         <aside className={style.sidebarWrapper}>
-            <div className={style.item}>
-                <div className={style.image}><img src={props.loginPage.avatar_url} alt=""/></div>
+            <div>
+                <NavLink to="/login" className={style.imageLink}>
+                    <img src={props.loginPage.avatar_url} alt=""/>
+                </NavLink>
             </div>
-            <div className={style.item}>
+            <div>
                 <div>
-                    <NavLink to="/terminals" className={style.link}>Терминалы</NavLink>
+                    <NavLink to="/terminals" className={style.asideLink}>Терминалы</NavLink>
                 </div>
                 <div>
-                    <NavLink to="/buyers" className={style.link}>Покупатели</NavLink>
-                </div>
-                <div>
-                    <NavLink to="/login" className={style.link}>Login</NavLink>
+                    <NavLink to="/buyers" className={style.asideLink}>Покупатели</NavLink>
                 </div>
             </div>
-            <footer className={style.item}>
+            <footer>
                 <div>Copyright © 2020</div>
             </footer>
         </aside>
