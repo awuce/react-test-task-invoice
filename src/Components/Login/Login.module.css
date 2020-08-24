@@ -1,0 +1,32 @@
+.loginLine,
+.passwordLine,
+.buttonLine {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.loginLine label,
+.passwordLine label {
+    margin-bottom: 5px;
+}
+
+.loginLine input,
+.passwordLine input {
+    width: 300px;
+    height: 30px;
+}
+
+.buttonLine > button {
+    width: 80px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #fff;
+    border: 2px solid #000;
+}
+
+.buttonLine > button:hover {
+    background-color: #000;
+    color: #fff
+}

@@ -6,7 +6,7 @@ const Sidebar = (props) => {
     return (
         <aside className={style.sidebarWrapper}>
             <div className={style.item}>
-                <div className={style.image}></div>
+                <div className={style.image}><img src={props.loginPage.avatar_url} alt=""/></div>
             </div>
             <div className={style.item}>
                 <div>
@@ -14,6 +14,9 @@ const Sidebar = (props) => {
                 </div>
                 <div>
                     <NavLink to="/buyers" className={style.link}>Покупатели</NavLink>
+                </div>
+                <div>
+                    <NavLink to="/login" className={style.link}>Login</NavLink>
                 </div>
             </div>
             <footer className={style.item}>

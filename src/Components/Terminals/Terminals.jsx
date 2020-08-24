@@ -1,24 +1,26 @@
 import React from "react";
-import style from "./Terminals.module.css"
 import TerminalsForm from "./TerminalsForm/TerminalsForm";
-import TerminalsList from "./TerminalsListItems/TerminalsList";
+import TerminalsList from "./TerminalsList/TerminalsList";
 
 const Terminals = (props) => {
-    let terminalsData = props.terminalsPage.terminalsData
+    let terminalsData = props.terminalsPage.terminalsData;
 
     let onAddTerminal = (values) => {
-        props.addTerminal(values.terminalName, values.terminalDesc)
-        values.terminalName = ''
-        values.terminalDesc = ''
+        props.addTerminal(values.terminalName, values.terminalDesc);
+        values.terminalName = '';
+        values.terminalDesc = '';
     }
+
     let onDeleteTerminal = (terminalId) => {
-        props.deleteTerminal(terminalId)
+        props.deleteTerminal(terminalId);
+        const raw = localStorage.getItem('terminals') || [];
+        terminalsData = JSON.parse(raw);
     }
 
     return (
         <div>
-            <TerminalsForm onSubmit={onAddTerminal} className={style.terminalsFormWrapper}/>
-            <TerminalsList onDeleteTerminal={onDeleteTerminal} terminalsData={terminalsData} className={style.terminalsListWrapper} />
+            <TerminalsForm onSubmit={onAddTerminal} />
+            <TerminalsList onDeleteTerminal={onDeleteTerminal} terminalsData={terminalsData} />
         </div>
     );
 }

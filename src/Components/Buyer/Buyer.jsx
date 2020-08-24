@@ -2,9 +2,9 @@ import React from "react";
 import style from "./Buyer.module.css"
 
 const Buyer = (props) => {
-    const id = props.match.params.id - 1
-    const buyer = props.buyersPage.buyersData[id]
-    console.log(buyer)
+    const id = props.match.params.id - 1;
+    const buyer = props.buyersPage.buyersData[id];
+
     return (
         <div className={style.buyerWrapper}>
             <div>
@@ -18,13 +18,13 @@ const Buyer = (props) => {
             <div>
                 <div>Чеки</div>
                 <div>{ (buyer.checks.length > 0)
-                    ? buyer.checks.map((c, i) => <span key={i}>{c} </span>)
-                    : <span>-</span>
+                    ? buyer.checks.map((c, i) => <span key={i}>{c}$ </span>)
+                    : <span>нет чеков</span>
                 }</div>
             </div>
             <div>
                 <div>Средний чек</div>
-                <div>{buyer.averageCheck}</div>
+                <div>{buyer.averageCheck}$</div>
             </div>
             <div>
                 <div>Количество покупок</div>
@@ -32,7 +32,7 @@ const Buyer = (props) => {
             </div>
             <div>
                 <div>Общая выручка</div>
-                <div>{buyer.totalProceeds}</div>
+                <div>{buyer.totalProceeds}$</div>
             </div>
         </div>
     )

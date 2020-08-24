@@ -1,9 +1,18 @@
-.customerString {
+.buyerLine {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     padding: 4px 10px;
 }
 
-.customerString:nth-child(odd) {
+.buyerLine:nth-child(odd) {
     background-color: #bfbfbf;
+}
+
+.buyerLineLinkName > a {
+    text-decoration: none;
+    color: #000;
+}
+
+.buyerLineLinkName > a:hover {
+    font-weight: bold;
 }

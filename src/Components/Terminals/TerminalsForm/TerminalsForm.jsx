@@ -1,8 +1,8 @@
 import React from "react";
-import style from "../Terminals.module.css"
+import style from "./TerminalsForm.module.css"
 import {Field, reduxForm} from "redux-form";
 
-const TerminalForm = (props) => {
+const TerminalsForm = (props) => {
     return (
         <form className={style.terminalsForm} onSubmit={props.handleSubmit}>
             <h3>Добавить термнал</h3>
@@ -19,8 +19,8 @@ const TerminalForm = (props) => {
     )
 }
 
-const TerminalReduxForm = reduxForm({
+const TerminalsReduxForm = reduxForm({
     form: 'addTerminalForm'
-})(TerminalForm)
+})(TerminalsForm)
 
-export default TerminalReduxForm;
+export default TerminalsReduxForm;

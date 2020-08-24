@@ -7,4 +7,17 @@
 .tableHead > div {
     display: grid;
     grid-auto-flow: column dense;
+    grid-template-columns: max-content;
+}
+
+.buttonSortWrapper {
+    margin-left: 5px;
+}
+
+.buttonSort {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
 }

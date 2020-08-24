@@ -12,11 +12,26 @@
   <component name="ChangeListManager">
     <list default="true" id="175542fe-09ff-4baf-ad82-07a6bddecff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Buyer/Buyer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Buyer/Buyer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Buyers/Buyers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Buyers/Buyers.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Buyers/BuyersBody/BuyersBody.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Buyers/BuyersBody/BuyersBody.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Buyers/BuyersBody/BuyersBody.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Buyers/BuyersBody/BuyersBody.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Buyers/BuyersHead/BuyersHead.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Buyers/BuyersHead/BuyersHead.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Buyers/BuyersHead/BuyersHead.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Buyers/BuyersHead/BuyersHead.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Buyers/BuyersPagination/BuyersPagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Buyers/BuyersPagination/BuyersPagination.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Buyers/BuyersPagination/BuyersPagination.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Buyers/BuyersPagination/BuyersPagination.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Terminals/Terminals.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Terminals/Terminals.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Terminals/Terminals.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Terminals/TerminalsForm/TerminalsForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Terminals/TerminalsForm/TerminalsForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Terminals/TerminalsListItems/TerminalsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Terminals/TerminalsList/TerminalsList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers/buyers-reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/buyers-reducer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers/buyers-reducer.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/buyers-reducer.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers/redux-store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/redux-store.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +61,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components/Buyer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components/Terminals/TerminalsListItems" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -55,11 +70,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Terminals\TerminalsListItems" />
+      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Terminals\TerminalsForm" />
+      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Login" />
       <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Buyer" />
       <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Buyers\Buyer" />
-      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Buyers" />
-      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Buyers\BuyersPagination" />
-      <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Reducers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components" />
@@ -69,33 +84,7 @@
       <recent name="C:\Users\gaynu\Documents\GitHub\react-test-task-invoice\src\Components\Terminals\TerminalsForm" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.sorting of buyersData by TotalProceeds in descending order should be correct">
-    <configuration name="sorting of buyersData by AverageCheck in descending order should be correct" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Reducers/buyers-reducer.test.jsx" />
-      <test-names>
-        <test-name value="sorting of buyersData by AverageCheck in descending order should be correct" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="sorting of buyersData by NumberPurchases in ascending order should be correct" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Reducers/buyers-reducer.test.jsx" />
-      <test-names>
-        <test-name value="sorting of buyersData by NumberPurchases in ascending order should be correct" />
-      </test-names>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Jest.sorting of buyersData by buyerName in descending order should be correct">
     <configuration name="sorting of buyersData by NumberPurchases in descending order should be correct" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -135,13 +124,39 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="sorting of buyersData by buyerName in ascending order should be correct" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Reducers/buyers-reducer.test.jsx" />
+      <test-names>
+        <test-name value="sorting of buyersData by buyerName in ascending order should be correct" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="sorting of buyersData by buyerName in descending order should be correct" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Reducers/buyers-reducer.test.jsx" />
+      <test-names>
+        <test-name value="sorting of buyersData by buyerName in descending order should be correct" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.sorting of buyersData by buyerName in descending order should be correct" />
+        <item itemvalue="Jest.sorting of buyersData by buyerName in ascending order should be correct" />
         <item itemvalue="Jest.sorting of buyersData by TotalProceeds in descending order should be correct" />
         <item itemvalue="Jest.sorting of buyersData by TotalProceeds in ascending order should be correct" />
         <item itemvalue="Jest.sorting of buyersData by NumberPurchases in descending order should be correct" />
-        <item itemvalue="Jest.sorting of buyersData by NumberPurchases in ascending order should be correct" />
-        <item itemvalue="Jest.sorting of buyersData by AverageCheck in descending order should be correct" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597798563392</updated>
       <workItem from="1597798585326" duration="68323000" />
-      <workItem from="1597965199427" duration="62406000" />
+      <workItem from="1597965199427" duration="76937000" />
     </task>
     <servers />
   </component>
@@ -180,25 +195,29 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="405" y="131" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.870@0.0.1600.870" timestamp="1597803882183" />
+    <state x="938" y="319" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598269835119">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="938" y="319" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.870@0.0.1600.870" timestamp="1598269835119" />
     <state x="594" y="276" key="FileChooserDialogImpl" timestamp="1597815610963">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="594" y="276" key="FileChooserDialogImpl/0.0.1600.870@0.0.1600.870" timestamp="1597815610963" />
-    <state width="1582" height="208" key="GridCell.Tab.0.bottom" timestamp="1598246970591">
+    <state width="1582" height="208" key="GridCell.Tab.0.bottom" timestamp="1598256379887">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1582" height="208" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1598246970591" />
-    <state width="1582" height="208" key="GridCell.Tab.0.center" timestamp="1598246970590">
+    <state width="1582" height="208" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1598256379887" />
+    <state width="1582" height="208" key="GridCell.Tab.0.center" timestamp="1598256379886">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1582" height="208" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1598246970590" />
-    <state width="1582" height="208" key="GridCell.Tab.0.left" timestamp="1598246970590">
+    <state width="1582" height="208" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1598256379886" />
+    <state width="1582" height="208" key="GridCell.Tab.0.left" timestamp="1598256379885">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1582" height="208" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1598246970590" />
-    <state width="1582" height="208" key="GridCell.Tab.0.right" timestamp="1598246970590">
+    <state width="1582" height="208" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1598256379885" />
+    <state width="1582" height="208" key="GridCell.Tab.0.right" timestamp="1598256379886">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1582" height="208" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1598246970590" />
+    <state width="1582" height="208" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1598256379886" />
   </component>
 </project>

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../Terminals.module.css"
+import style from "./TerminalsList.module.css"
 
 const TerminalsList = (props) => {
     let terminalsMap = [...props.terminalsData]
@@ -7,10 +7,10 @@ const TerminalsList = (props) => {
                                  key={t.terminalId}
                                  terminalId={t.terminalId}
                                  name={t.name}
-                                 desc={t.desc} /> )
+                                 desc={t.desc} /> );
 
     return (
-        <div>
+        <div className={style.terminalsListWrapper}>
             <h3>Список терминалов</h3>
             <div className={style.terminalsListHeaders}>
                 <div>Название терминала</div>
@@ -26,7 +26,13 @@ const TerminalItem = (props) => {
         <div className={style.terminalItem}>
             <div>{props.name}</div>
             <div>{props.desc}</div>
-            <div><button type="submit" onClick={ () => props.onDeleteTerminal(props.terminalId) }>Удалить</button></div>
+            <div>
+                <button type="submit"
+                        className={style.terminalButton}
+                        onClick={ () => props.onDeleteTerminal(props.terminalId) }>
+                    Удалить
+                </button>
+            </div>
         </div>
     )
 }

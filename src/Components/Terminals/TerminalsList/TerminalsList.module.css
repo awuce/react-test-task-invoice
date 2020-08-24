@@ -1,0 +1,38 @@
+.terminalsListWrapper {
+    margin-top: 100px;
+}
+
+.terminalsListWrapper h3 {
+    text-align: center;
+}
+
+.terminalsListHeaders {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-column-gap: 30px;
+    margin-bottom: 20px;
+}
+
+.terminalItem {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-column-gap: 30px;
+}
+
+.itemName {
+    margin-bottom: 20px;
+}
+
+.itemDesc {
+    margin-bottom: 20px;
+}
+
+.terminalButton {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.terminalButton:hover {
+    background-color: #000;
+    color: #fff;
+}

@@ -1,20 +1,18 @@
-.paginationWrapper {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-
 .paginationPerPage {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 7fr 1fr;
 }
 
 .paginationPerPage > div {
-    font-size: 14pt;
+    font-size: 13pt;
     text-align: right;
     margin: auto 10px auto 0;
 }
+
 .paginationPerPage > select {
+    font-size: 13pt;
     height: 30px;
+    border: 1px solid #000;
 }
 
 .paginationPage {

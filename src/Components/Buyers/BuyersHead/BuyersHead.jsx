@@ -10,8 +10,8 @@ const Button = (props) => {
     }
 
     return (
-        <span>
-            <button onClick={ sort }>
+        <span className={style.buttonSortWrapper}>
+            <button onClick={ sort } className={style.buttonSort}>
                 { (toggle) ? `v` : `^` }
             </button>
         </span>
