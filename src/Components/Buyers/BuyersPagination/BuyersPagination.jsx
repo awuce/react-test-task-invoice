@@ -5,12 +5,12 @@ const BuyersPagination = (props) => {
     return (
         <div className={style.paginationWrapper}>
             <nav>
-                { props.pageNumbers.map(num => (
+                { (props.pageNumbers.length > 1) && props.pageNumbers.map(num => (
                     <span key={num} className={ props.currentPage === num ? style.selectedPage : style.paginationPage }
                           onClick={(e) => props.paginate(num)} >
                         {num}
                     </span>
-                ))}
+                 ))}
             </nav>
             <div className={style.paginationPerPage}>
                 <div>Разбивка на страницы:</div>

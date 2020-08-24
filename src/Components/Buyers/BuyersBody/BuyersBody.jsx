@@ -1,9 +1,10 @@
 import React from "react";
 import style from "./BuyersBody.module.css";
+import {NavLink} from "react-router-dom";
 
 const BuyersBody = (props) => {
     const buyersMap = props.buyersData
-        .map( b =>  <Buyer key={b.buyerId}
+        .map( b =>  <BuyerLine key={b.buyerId}
                            buyerId={b.buyerId}
                            buyerName={b.buyerName}
                            averageCheck={b.averageCheck}
@@ -12,18 +13,18 @@ const BuyersBody = (props) => {
                            totalProceeds={b.totalProceeds}
                            setInitialData={props.setInitialData}/> )
 
-    return (
-        <div className={style.tableBody}>
-            { buyersMap }
-        </div>
-    );
+    return <div>{ buyersMap }</div>;
 }
 
-const Buyer = (props) => {
+const BuyerLine = (props) => {
     return (
         <div className={style.customerString}>
             <div>{props.buyerId}</div>
-            <div>{props.buyerName}</div>
+            <div>
+                <NavLink to={"/buyers/" + props.buyerId}>
+                    {props.buyerName}
+                </NavLink>
+                </div>
             <div>{props.averageCheck}</div>
             <div>{props.numberPurchases}</div>
             <div>{props.totalProceeds}</div>
