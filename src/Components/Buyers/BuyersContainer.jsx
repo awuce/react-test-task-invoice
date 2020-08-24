@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import Buyers from "./Buyers";
 import {
-    setInitialDataAC,
+    setCurrentBuyersDataAC,
     sortByAverageCheckAC,
     sortByIdAC,
     sortByNameAC,
@@ -9,28 +9,31 @@ import {
     sortByTotalProceedsAC
 } from "../../Reducers/buyers-reducer";
 
-
 let mapStateToProps = (state) => {
     return {
         buyersPage: state.buyersPage
     }
 }
+
 let mapDispatchToProps = (dispatch) => {
     return {
-        sortById: (toggle) => {
-            dispatch(sortByIdAC(toggle));
+        setCurrentBuyersData: (data) => {
+            dispatch(setCurrentBuyersDataAC(data));
         },
-        sortByName: (toggle) => {
-            dispatch(sortByNameAC(toggle));
+        sortById: (toggle, indexes) => {
+            dispatch(sortByIdAC(toggle, indexes));
         },
-        sortByAverageCheck: (toggle) => {
-            dispatch(sortByAverageCheckAC(toggle));
+        sortByName: (toggle, indexes) => {
+            dispatch(sortByNameAC(toggle, indexes));
         },
-        sortByNumberPurchases: (toggle) => {
-            dispatch(sortByNumberPurchasesAC(toggle));
+        sortByAverageCheck: (toggle, indexes) => {
+            dispatch(sortByAverageCheckAC(toggle, indexes));
         },
-        sortByTotalProceeds: (toggle) => {
-            dispatch(sortByTotalProceedsAC(toggle));
+        sortByNumberPurchases: (toggle, indexes) => {
+            dispatch(sortByNumberPurchasesAC(toggle, indexes));
+        },
+        sortByTotalProceeds: (toggle, indexes) => {
+            dispatch(sortByTotalProceedsAC(toggle, indexes));
         },
     }
 }

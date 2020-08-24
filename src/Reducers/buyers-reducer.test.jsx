@@ -1,4 +1,5 @@
 import buyersReducer, {
+    setCurrentBuyersDataAC,
     sortByAverageCheckAC,
     sortByIdAC,
     sortByNumberPurchasesAC,
@@ -23,51 +24,58 @@ let initialState = {
         {id: 13, buyerId: 14, buyerName: "_", averageCheck: Math.round(1600/3), checks: [1000, 400, 200], numberPurchases: 3, totalProceeds: 1600},
         {id: 14, buyerId: 15, buyerName: "_", averageCheck: 200, checks: [200], numberPurchases: 1, totalProceeds: 200},
     ],
+    currentBuyersData: [],
 }
 
+it('currentBuyersData should be equal buyersData', () => {
+    let action = setCurrentBuyersDataAC(initialState.buyersData);
+    let state = buyersReducer(initialState, action);
+    expect(state.currentBuyersData[0].buyerId).toBe(state.buyersData[0].buyerId);
+})
+
 it('sorting of buyersData by Id in ascending order should be correct', () => {
-    let action = sortByIdAC(false);
+    let action = sortByIdAC(false, [0, 15]);
     let state = buyersReducer(initialState, action);
     expect(state.buyersData[0].buyerId).toBe(15);
 })
 it('sorting of buyersData by Id in descending order should be correct', () => {
-    let action = sortByIdAC(true);
+    let action = sortByIdAC(true, [0, 15]);
     let state = buyersReducer(initialState, action);
     expect(state.buyersData[0].buyerId).toBe(1);
 })
 
 
 it('sorting of buyersData by AverageCheck in ascending order should be correct', () => {
-    let action = sortByAverageCheckAC(false);
+    let action = sortByAverageCheckAC(false, [0, 15]);
     let state = buyersReducer(initialState, action);
     expect(state.buyersData[0].averageCheck).toBe(625);
 })
 it('sorting of buyersData by AverageCheck in descending order should be correct', () => {
-    let action = sortByAverageCheckAC(true);
+    let action = sortByAverageCheckAC(true, [0, 15]);
     let state = buyersReducer(initialState, action);
     expect(state.buyersData[0].averageCheck).toBe(0);
 })
 
 
 it('sorting of buyersData by NumberPurchases in ascending order should be correct', () => {
-    let action = sortByNumberPurchasesAC(false);
+    let action = sortByNumberPurchasesAC(false, [0, 15]);
     let state = buyersReducer(initialState, action);
     expect(state.buyersData[0].numberPurchases).toBe(3);
 })
 it('sorting of buyersData by NumberPurchases in descending order should be correct', () => {
-    let action = sortByNumberPurchasesAC(true);
+    let action = sortByNumberPurchasesAC(true, [0, 15]);
     let state = buyersReducer(initialState, action);
     expect(state.buyersData[0].numberPurchases).toBe(0);
 })
 
 
 it('sorting of buyersData by TotalProceeds in ascending order should be correct', () => {
-    let action = sortByTotalProceedsAC(false);
+    let action = sortByTotalProceedsAC(false, [0, 15]);
     let state = buyersReducer(initialState, action);
     expect(state.buyersData[0].totalProceeds).toBe(1600);
 })
 it('sorting of buyersData by TotalProceeds in descending order should be correct', () => {
-    let action = sortByTotalProceedsAC(true);
+    let action = sortByTotalProceedsAC(true, [0, 15]);
     let state = buyersReducer(initialState, action);
     expect(state.buyersData[0].totalProceeds).toBe(0);
 })

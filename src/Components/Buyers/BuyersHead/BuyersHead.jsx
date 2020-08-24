@@ -5,7 +5,7 @@ const Button = (props) => {
     let [toggle, setToggle] = useState(true);
 
     function sort() {
-        props.sort(toggle);
+        props.sort(toggle, props.indexes);
         setToggle(!toggle);
     }
 
@@ -23,23 +23,23 @@ const BuyersHead = (props) => {
         <div className={style.tableHead}>
             <div>
                 <div>ID покупателя</div>
-                <Button sort={props.sortById}/>
+                <Button sort={props.sortById} indexes={props.indexes}/>
             </div>
             <div>
                 <div>Имя покупателя</div>
-                <Button sort={props.sortByName}/>
+                <Button sort={props.sortByName} indexes={props.indexes}/>
             </div>
             <div>
                 <div>Средний чек</div>
-                <Button sort={props.sortByAverageCheck}/>
+                <Button sort={props.sortByAverageCheck} indexes={props.indexes}/>
             </div>
             <div>
                 <div>Количество покупок</div>
-                <Button sort={props.sortByNumberPurchases}/>
+                <Button sort={props.sortByNumberPurchases} indexes={props.indexes}/>
             </div>
             <div>
                 <div>Общая выручка</div>
-                <Button sort={props.sortByTotalProceeds}/>
+                <Button sort={props.sortByTotalProceeds} indexes={props.indexes}/>
             </div>
         </div>
     )

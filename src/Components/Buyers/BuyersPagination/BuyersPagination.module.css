@@ -1,0 +1,29 @@
+.paginationWrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.paginationPerPage {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.paginationPerPage > div {
+    font-size: 14pt;
+    text-align: right;
+    margin: auto 10px auto 0;
+}
+.paginationPerPage > select {
+    height: 30px;
+}
+
+.paginationPage {
+    margin: auto 5px;
+    font-size: 18pt;
+}
+
+.selectedPage {
+    margin: auto 5px;
+    font-size: 20pt;
+    color: #d2691e;
+}

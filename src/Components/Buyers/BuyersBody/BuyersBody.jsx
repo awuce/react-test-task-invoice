@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import style from "./BuyersBody.module.css";
 
 const BuyersBody = (props) => {
