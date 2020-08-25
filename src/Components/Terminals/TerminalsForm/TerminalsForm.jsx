@@ -11,7 +11,7 @@ const maxLength150 = maxLengthCreator(150);
 const TerminalsForm = (props) => {
     return (
         <form className={style.terminalsForm} onSubmit={props.handleSubmit}>
-            <h3>Добавить термнал</h3>
+            <h3>Добавить терминал</h3>
             <div className={style.terminalNameWrapper}>
                 <label htmlFor="terminalName">Название терминала</label>
                 <Field name="terminalName" component={Input}

@@ -12,9 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="175542fe-09ff-4baf-ad82-07a6bddecff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers/login-reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/login-reducer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/validators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Terminals/TerminalsForm/TerminalsForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Terminals/TerminalsForm/TerminalsForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Terminals/TerminalsForm/TerminalsForm.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Terminals/TerminalsForm/TerminalsForm.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Terminals/TerminalsList/TerminalsList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Terminals/TerminalsList/TerminalsList.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +155,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597798563392</updated>
       <workItem from="1597798585326" duration="68323000" />
-      <workItem from="1597965199427" duration="94963000" />
+      <workItem from="1597965199427" duration="96088000" />
     </task>
     <servers />
   </component>

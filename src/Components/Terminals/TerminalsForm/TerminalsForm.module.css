@@ -34,5 +34,6 @@
 
 .terminalsForm button:hover {
     background-color: #000;
-    color: #fff
+    color: #fff;
+    cursor: pointer;
 }
