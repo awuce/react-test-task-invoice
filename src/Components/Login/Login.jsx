@@ -3,7 +3,12 @@ import {Field, reduxForm} from "redux-form";
 import style from "./Login.module.css"
 import {login} from "../../Reducers/login-reducer";
 import {connect} from "react-redux";
-import {maxLengthCreator, minLengthCreator, required} from "../../Utils/validators";
+import {
+    letterNumberCreator,
+    maxLengthCreator,
+    minLengthCreator,
+    required
+} from "../../Utils/validators";
 import {Input} from "../../Utils/FormControl";
 import {Redirect} from "react-router-dom";
 
@@ -19,7 +24,7 @@ const LoginForm = (props) => {
     //     axios.get(api).then((res) => {
     //         console.log(res.data)
     //     })
-    // } onChange={v => change(v)
+    // } onChange={v => change(v)}
 
     return (
         <form onSubmit={props.handleSubmit}>
@@ -32,8 +37,8 @@ const LoginForm = (props) => {
             <div className={style.passwordLine}>
                 <label htmlFor="password">Введите пароль:</label>
                 <Field component={Input} name="password"
-                       validate={[required, minLength8, maxLength20]}
-                       placeholder="password" type={"password"} />
+                       validate={[required, minLength8, maxLength20, letterNumberCreator]}
+                       placeholder="password" type="password" />
             </div>
             <div className={style.buttonLine}>
                 <button type="submit">Login</button>
@@ -46,13 +51,15 @@ const LoginReduxForm = reduxForm({form: "loginForm"})(LoginForm);
 const Login = (props) => {
     const onSubmit = (formData) => {
         props.login(formData.login);
-        formData.login = "";
-        formData.password = "";
+        if (props.loginPage.isAuth) {
+            formData.login = "";
+            formData.password = "";
+        }
     }
 
     if (props.loginPage.isAuth) return <Redirect to={"/terminals"} />
     return (
-        <LoginReduxForm onSubmit={onSubmit}/>
+        <LoginReduxForm onSubmit={onSubmit} />
     )
 }
 
