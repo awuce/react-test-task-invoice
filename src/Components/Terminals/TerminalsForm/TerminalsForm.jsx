@@ -4,9 +4,9 @@ import {Field, reduxForm} from "redux-form";
 import {Input, Textarea} from "../../../Utils/FormControl";
 import {maxLengthCreator, minLengthCreator, required} from "../../../Utils/validators";
 
-const minLength1 = minLengthCreator(1)
-const maxLength50 = maxLengthCreator(50)
-const maxLength150 = maxLengthCreator(150)
+const minLength1 = minLengthCreator(1);
+const maxLength50 = maxLengthCreator(50);
+const maxLength150 = maxLengthCreator(150);
 
 const TerminalsForm = (props) => {
     return (

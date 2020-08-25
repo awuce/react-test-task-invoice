@@ -5,6 +5,7 @@ import {login} from "../../Reducers/login-reducer";
 import {connect} from "react-redux";
 import {maxLengthCreator, minLengthCreator, required} from "../../Utils/validators";
 import {Input} from "../../Utils/FormControl";
+import {Redirect} from "react-router-dom";
 
 const maxLength20 = maxLengthCreator(20);
 const minLength1 = minLengthCreator(1);
@@ -40,15 +41,16 @@ const LoginForm = (props) => {
         </form>
     )
 }
-const LoginReduxForm = reduxForm({form: 'loginForm'})(LoginForm);
+const LoginReduxForm = reduxForm({form: "loginForm"})(LoginForm);
 
 const Login = (props) => {
     const onSubmit = (formData) => {
         props.login(formData.login);
-        formData.login = '';
-        formData.password = '';
+        formData.login = "";
+        formData.password = "";
     }
 
+    if (props.loginPage.isAuth) return <Redirect to={"/terminals"} />
     return (
         <LoginReduxForm onSubmit={onSubmit}/>
     )

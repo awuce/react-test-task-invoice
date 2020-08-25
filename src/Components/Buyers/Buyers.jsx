@@ -3,6 +3,7 @@ import style from "./Buyers.module.css";
 import BuyersBody from "./BuyersBody/BuyersBody";
 import BuyersHead from "./BuyersHead/BuyersHead";
 import BuyersPagination from "./BuyersPagination/BuyersPagination";
+import {Redirect} from "react-router-dom";
 
 const Buyers = (props) => {
     let buyersData = props.buyersPage.buyersData;
@@ -29,6 +30,7 @@ const Buyers = (props) => {
     }, [buyersPerPage, currentPage])
 
 
+    if (!props.loginPage.isAuth) return <Redirect to={'/login'} />
     return (
         <div>
             <BuyersPagination buyersPerPage={buyersPerPage}

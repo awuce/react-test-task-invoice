@@ -4,7 +4,8 @@ import {addTerminalAC, deleteTerminalAC} from "../../Reducers/terminals-reducer"
 
 let mapStateToProps = (state) => {
     return {
-        terminalsPage: state.terminalsPage
+        terminalsPage: state.terminalsPage,
+        loginPage: state.loginPage,
     }
 }
 let mapDispatchToProps = (dispatch) => {

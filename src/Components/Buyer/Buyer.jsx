@@ -1,10 +1,12 @@
 import React from "react";
 import style from "./Buyer.module.css"
+import {Redirect} from "react-router-dom";
 
 const Buyer = (props) => {
     const id = props.match.params.id - 1;
     const buyer = props.buyersPage.buyersData[id];
 
+    if (!props.loginPage.isAuth) return <Redirect to={'/login'} />
     return (
         <div className={style.buyerWrapper}>
             <div>

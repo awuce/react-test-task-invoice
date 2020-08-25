@@ -11,7 +11,8 @@ import {
 
 let mapStateToProps = (state) => {
     return {
-        buyersPage: state.buyersPage
+        buyersPage: state.buyersPage,
+        loginPage: state.loginPage,
     }
 }
 
